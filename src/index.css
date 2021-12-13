@@ -1,13 +1,109 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+* {
+    /* font-size: 2rem; */
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    color: black;
+    background-color: #aaa;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+    box-sizing: border-box;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+.editorWrap {
+    /* font-weight: 500; */
+    width: 95%;
+}
+
+.previewWrap {
+    width: 100%;
+    min-height: 100%;
+    border: 1px solid black;
+}
+
+/* Removed nesting because I'm learning/converting scss back to css */
+/* // MARKDOWN STYLES */
+/* #preview { */
+  /* padding: 0 1rem; */
+
+  blockquote {
+    border-left: 3px solid #224b4b;
+    color: #224b4b;
+    padding-left: 5px;
+    margin-left: 25px;
+  }
+
+  /* > p > code {
+    padding: 3px;
+  } */
+
+  code {
+    padding: 3px;
+    background: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+  pre {
+    display: block;
+    overflow: auto;
+    background: white;
+    padding: 5px;
+    line-height: 1.2;
+  }
+
+  h1 {
+    border-bottom: 2px solid black;
+  }
+
+  h2 {
+    border-bottom: 1px solid black;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    border: 2px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  img {
+    display: block;
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+
+.toolbar {
+    background: white;
+}
+
+textarea {
+    width: 99%;
+    min-height: 99%;
+}
+
+@media (min-width: 768px) {
+    #app {
+        flex-direction: row;
+    }
+    .editorWrap {
+        /* font-weight: 500; */
+        width: 50%;
+      }
+    
+    .previewWrap {
+        width: 50%;
+    }
 }
